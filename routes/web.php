@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('top');
 });
+
+Route::get('game/{lang}/{level}', 'GameController@index');
+
+Route::get('russian/level/1', function () {
+    return view('game');
+});
