@@ -11,9 +11,6 @@
                 <h5 class="white-text">Contents</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="/">TOP</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/games/level/1/">Level 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/games/level/2/">Level 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/games/level/3/">Level 3</a></li>
                   <li><a class="grey-text text-lighten-3" href="/contents/setting/">ロシア語キーボードの設定方法(Only in Japanese)</a></li>
                 </ul>
               </div>

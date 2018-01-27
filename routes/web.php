@@ -15,8 +15,10 @@ Route::get('/', function () {
     return view('top');
 });
 
+//game main screen
 Route::get('game/{lang}/{level}', 'GameController@index');
 
-Route::get('russian/level/1', function () {
-    return view('game');
+//Keyboard setting
+Route::get('contents/setting', function () {
+    return view('setting');
 });

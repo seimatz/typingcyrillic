@@ -1,4 +1,4 @@
-@section('title', 'Typing.Slavs')
+@section('title', 'Typing.Slavic')
 
 @extends('layouts.main')
 
@@ -9,10 +9,10 @@
     <div class="col s12">
     <div class="card-panel">
       <h4>ようこそ Welcome!</h4>
-      <p>Typing.Slavs は、スラヴ系言語のタイピング練習のためのウェブアプリです。</p>
+      <p>Typing.Slavic は、スラヴ系言語のタイピング練習のためのウェブアプリです。</p>
       <p>Chrome、Firefox、Safariの最新版で正常に動作します。PCのみです。</p>
         <p>キーボードの入力言語を各言語のキーボードに切り替えて、ゲームを始めてください。<a href="/contents/setting/">ロシア語キーボードの設定方法</a></p>
-      <p>Typing-Ruは開発中です。バクを見つけたら<a href="https://goo.gl/forms/LfdHgaVzdLPRTayX2" target="_blank">バグ報告フォーム</a>からご連絡ください。要望もこちらから。</p>
+      <p>Typing.Slavicは開発中です。バクを見つけたら<a href="https://goo.gl/forms/LfdHgaVzdLPRTayX2" target="_blank">バグ報告フォーム</a>からご連絡ください。要望もこちらから。</p>
     </div>
     </div>
 
@@ -30,11 +30,11 @@
         </ul>
       </div>
       <div class="card-content grey lighten-4">
-          <div id="ru-level1">アルファベットまたは記号を１文字ずつ練習します。  <a class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
+          <div id="ru-level1">アルファベットまたは記号を１文字ずつ練習します。  <a href="/game/russian/1" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
 
 </div>
-        <div id="ru-level2">基礎単語1,000語から、ランダムで30問を出題します。</div>
-        <div id="ru-level3">会話表現・ことわざなどからランダムで15問を出題します。</div>
+        <div id="ru-level2">基礎単語1,000語から、ランダムで30問を出題します。　<a href="/game/russian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+        <div id="ru-level3">会話表現・ことわざなどからランダムで15問を出題します。　<a href="/game/russian/3" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
         <div id="ru-original">Comming soon!</div>
 
       </div>

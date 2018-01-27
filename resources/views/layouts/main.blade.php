@@ -23,7 +23,7 @@
     <body>
     <nav>
       <div class="nav-wrapper teal accent-4">
-        <a href="/" class="brand-logo center">Typing.Slavs</a>
+        <a href="/" class="brand-logo center">Typing.Slavic Beta</a>
       </div>
     </nav>
 
