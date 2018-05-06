@@ -1,8 +1,6 @@
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-    //$('#modal3').openModal();
-  });
+      $(document).ready(function(){
+        $('.modal-trigger').leanModal();
+      });
 
       var qNumber= 0;//問題番号初期値
       //問題文設定。画面から取得。
@@ -11,11 +9,11 @@
       document.getElementById("qtotal").innerHTML = questions.length;
       //['Более 20 турецких танков пересекли границу с Сирией в районе города Аль-Раи','да','привет'];
 
-
        //画面描写パーツの定義
         var question = document.getElementById("question");
         var target = document.getElementById("answer");
         var typed = document.getElementById("typed");
+        var misstyped = document.getElementById("misstyped");
         var typedtxt = new Array(); //Show typed text by user
 
        //keyboard type
@@ -41,22 +39,21 @@
        var typeCount = 0;//１文字ごとのタイプ数をカウント（一発正解判定用）
        var okCount = 0;//一発正解の文字数をカウント
        var maxchar = 0; //問題の文字列の長さを測定
+       var startflag = 0; //ready 画面か判定するフラグ
 
        //First question
-       newQuestion(qNumber);
-
+       if(qNumber == 0){
+         $('#modal3').openModal({dismissible:false});
+       }
 
        //Question renew
        function newQuestion(qNumber){
+            startflag = 1;
              //全問クリア
-             if(qNumber > questions.length -1){ 
+             if(qNumber > questions.length -1){
               //count NG ミスタイプをカウント
 
-             //open modal window
-
              var fineRate = okCount/totalCharnum *100; //正確性
-
-
 
              if(fineRate < 100){
                 //ミスタイプのうちわけカウント
@@ -103,7 +100,6 @@
              $('#modal2').openModal();
              hidekeyguide();
            }
-
          charnum = 0;
          maxchar = 0;
          typed.innerHTML = "";
@@ -175,7 +171,7 @@
           time.value = 0;
           run();
         }
-        timerId = setTimeout(function() { 
+        timerId = setTimeout(function() {
           timer(); //0.1 sec ごとにtimer function を実行。これでタイマーが動く。
         }, 100);
 
@@ -184,6 +180,12 @@
       //キーが押された時の処理
       document.onkeypress = function(e){
          //var currentKey = e.keyCode;
+         //var modal3 = $('#modal3').isOpen;
+         if(startflag < 1 && e.keyCode == 13){
+           $('#modal3').closeModal();
+           newQuestion(0);
+         }
+
          typeCount += 1;
          var currentKey = String.fromCharCode(e.charCode);
          //キーが正解のとき
@@ -209,17 +211,18 @@
               soundOk();
             }
             //キーが間違いの時
-        } else {//type false
-          // target.innerHTML = "NG" + currentKey; //debug use
+        } else if(e.keyCode != 13) {//type false
+          misstyped.innerHTML = currentKey;
           soundNg();
           misstype.push(wordtoArray[charnum]);
+          setTimeout("misstyped.innerHTML = ''",500);
         }
 
         };
 
-        function hidekeyguide(){
-          document.getElementById("keyboard").style.zIndex = "0";
-        }
+        // function hidekeyguide(){
+        //   document.getElementById("keyboard").style.zIndex = "0";
+        // }
 
         function soundOk() {
           // [ID:sound-file]の音声ファイルを再生[play()]する

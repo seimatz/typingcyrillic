@@ -1,4 +1,4 @@
-@section('title', 'Typing.Slavs')
+@section('title', 'Typing.Slavic')
 
 @extends('layouts.main')
 
@@ -19,9 +19,10 @@
                 <form class="col s12">
                   <div class="row">
                     <div class="input-field col s12">
-                      <textarea id="typed" class="materialize-textarea red-text text-darken-2 typedtxt"  wrap="soft" autofocus readonly></textarea>
+                      <textarea id="typed" class="materialize-textarea red-text text-darken-2 typedtxt" wrap="soft" autofocus readonly></textarea>
                       <label for="typed"></label>
                     </div>
+                    <div id="misstyped" class="col s12 misstyped indigo-text"></div>
                   </div>
                 </form>
               </div>
@@ -76,12 +77,13 @@
 
 <!-- Modal Structure for start window-->
   <div id="modal3" class="modal">
-    <div id="start" class="modal-content">
-     Ready?
-     <button onclick="">Go!</button>
-    </div>
-    <div class="modal-footer">
-      <button class="modal-action modal-close btn-flat" style="clear:both;" onclick="reset()">OK</button>
+    <div id="start" class="modal-content center">
+     <h3>Ready?</h3>
+     <p>キーボードの設定を{{$lang_jp}}に変えてください</p>
+     <button class="modal-action modal-close btn-large orange darken-3" style="width:80%;" onclick="newQuestion(0)">GO! or Press Enter Key</button><br><br>
+     <a class="btn grey" href="/" style="width:35%;"><i class="material-icons left">settings_power</i>END</a>
+     <button data-target="modal1" class="modal-trigger btn col s12 grey" style="width:35%;"><i class="material-icons left">live_help</i>HOW TO PLAY</button><br><br>
+
     </div>
   </div>
 
