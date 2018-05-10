@@ -51,11 +51,25 @@
   </div>
   </main>
 
+  <!-- Modal Structure for start window-->
+    <div id="modal3" class="modal">
+      <div id="start" class="modal-content center">
+       <h3>Ready?</h3>
+       <p>キーボードの設定を{{$lang_jp}}に変えてください</p>
+       <button class="modal-action modal-close btn-large orange darken-3" style="width:80%;" onclick="newQuestion(0)">GO! or Press Enter Key</button><br><br>
+       <a class="btn grey" href="/" style="width:35%;"><i class="material-icons left">settings_power</i>END</a>
+       <button data-target="modal1" class="modal-trigger btn col s12 grey" style="width:35%;"><i class="material-icons left">live_help</i>HOW TO PLAY</button><br><br>
+
+      </div>
+    </div>
+    
  <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>使い方</h4>
-      <p>・キーボードの入力言語を「ロシア語」に切り替えて、ゲームを始めてください。</p>
+      <p>・Typing.Slavic は、スラヴ系言語のタイピング練習のためのウェブアプリです。</p>
+      <p>・Chrome、Firefox、Safariの最新版で正常に動作します。PCのみです。</p>
+      <p>・キーボードの入力言語を「{{$lang_jp}}」に切り替えて、ゲームを始めてください。<a href="/contents/setting/">ロシア語キーボードの設定方法</a></p></p>
       <p>・制限時間はありません。</p>
       <p>・SKIPボタンで次の問題へ行けます。</p>
       <p>・小文字と大文字を区別します。スペース、カンマ、ピリオド、記号も入力してください。</p>
@@ -72,18 +86,6 @@
     </div>
     <div class="modal-footer">
       <button class="modal-action modal-close btn-flat" style="clear:both;" onclick="reset()">OK</button>
-    </div>
-  </div>
-
-<!-- Modal Structure for start window-->
-  <div id="modal3" class="modal">
-    <div id="start" class="modal-content center">
-     <h3>Ready?</h3>
-     <p>キーボードの設定を{{$lang_jp}}に変えてください</p>
-     <button class="modal-action modal-close btn-large orange darken-3" style="width:80%;" onclick="newQuestion(0)">GO! or Press Enter Key</button><br><br>
-     <a class="btn grey" href="/" style="width:35%;"><i class="material-icons left">settings_power</i>END</a>
-     <button data-target="modal1" class="modal-trigger btn col s12 grey" style="width:35%;"><i class="material-icons left">live_help</i>HOW TO PLAY</button><br><br>
-
     </div>
   </div>
 

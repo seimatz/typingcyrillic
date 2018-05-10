@@ -21,7 +21,7 @@
 
     </head>
 
-    <body>
+    <body class="blue-grey lighten-5">
     <nav>
       <div class="nav-wrapper teal accent-4">
         <a href="/" class="brand-logo center">Typing.Slavic Beta</a>
@@ -32,7 +32,7 @@
 
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>-->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> -->
       <script type="text/javascript" src={{ asset('js/materialize.min.js')}}></script>
       <script type="text/javascript" src={{ asset('js/typingru.js?2') }}></script>
 
