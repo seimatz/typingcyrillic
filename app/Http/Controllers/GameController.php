@@ -21,10 +21,17 @@ class GameController extends Controller
       ->limit($limit)
       ->get();
       $questions = array();
+      $trans_en = array();
+      $trans_jp = array();
+
       foreach($items as $item){
          array_push($questions, $item->question);
+         array_push($trans_en, $item->en."  ".$item->jp);
+         array_push($trans_jp, $item->jp);
       }
       $q_sentence = join('/', $questions);
+      $en_sentence = join('/', $trans_en);
+      $jp_sentence = join('/', $trans_jp);
 
       $lang_jp = "言語名";
       if($lang == "russian"){
@@ -36,6 +43,6 @@ class GameController extends Controller
       } elseif($lang == "belarusian"){
         $lang_jp = "ベラルーシ語";
       }
-      return view('game', ['q_sentence'=>$q_sentence, 'lang_jp'=>$lang_jp]);
+      return view('game', ['q_sentence'=>$q_sentence, 'lang_jp'=>$lang_jp, 'en_sentence'=>$en_sentence, 'jp_sentence'=>$jp_sentence]);
     }
 }

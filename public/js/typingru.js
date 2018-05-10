@@ -5,30 +5,20 @@
       var qNumber= 0;//問題番号初期値
       //問題文設定。画面から取得。
       var questions_all = document.getElementById("questions_all").innerText;
+      var trans_all =  document.getElementById("trans_all").innerText;
       var questions = questions_all.split("/");
+      var translates = trans_all.split("/");
+
       document.getElementById("qtotal").innerHTML = questions.length;
       //['Более 20 турецких танков пересекли границу с Сирией в районе города Аль-Раи','да','привет'];
 
        //画面描写パーツの定義
         var question = document.getElementById("question");
+        var trans = document.getElementById("trans");
         var target = document.getElementById("answer");
         var typed = document.getElementById("typed");
         var misstyped = document.getElementById("misstyped");
         var typedtxt = new Array(); //Show typed text by user
-
-       //keyboard type
-       function keyboardChange(){
-        var type1 = document.getElementById("test1");
-        var type2 = document.getElementById("test2");
-
-        if(type1.checked){
-          document.getElementById("keyboard_1").style.display = "block";
-          document.getElementById("keyboard_2").style.display = "none";
-        } else {
-          document.getElementById("keyboard_2").style.display = "block";
-          document.getElementById("keyboard_1").style.display = "none";
-        }
-       }
 
        var misstype = new Array();//ミスタイプ情報用
        var ngTotal = {};//NGカウント用Object
@@ -105,6 +95,7 @@
          typed.innerHTML = "";
          maxchar = stoKey(questions[qNumber]).length;
          question.innerHTML = questions[qNumber]; //Show question
+         trans.innerHTML = translates[qNumber];
          document.getElementById("qcount").innerHTML = qNumber + 1;
          run(); //start count
        }
@@ -219,10 +210,6 @@
         }
 
         };
-
-        // function hidekeyguide(){
-        //   document.getElementById("keyboard").style.zIndex = "0";
-        // }
 
         function soundOk() {
           // [ID:sound-file]の音声ファイルを再生[play()]する

@@ -13,7 +13,8 @@
         <!-- Typing field -->
         <div class="card-panel gamewindow">
               <!-- 問題　Questionary Area -->
-              <div id="question" class="grey-text text-darken-4 question""></div>
+              <div id="question" class="grey-text text-darken-4 question"></div>
+              <div id="trans" class="grey-text trans"></div>
               <!-- 回答　Answer Area-->
               <div class="row">
                 <form class="col s12">
@@ -62,7 +63,7 @@
 
       </div>
     </div>
-    
+
  <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -93,9 +94,12 @@
   <audio id="sound-ok" preload="auto" src="{{ asset('img/decision3.mp3')}}"></audio>
   <audio id="sound-ng" preload="auto" src="{{ asset('img/cancel2.mp3')}}"></audio>
 
-  <div id="questions_all" style="color:#ffffff;">
+  <div id="questions_all" style="color:#eceff1;">
     <!--問題一覧　これは白文字のため表示されない-->
     {{$q_sentence}}
   </div>
-
+  <div id="trans_all" style="color:#eceff1;">
+    <!--問題一覧　これは白文字のため表示されない-->
+    {{$en_sentence}}
+  </div>
 @endsection

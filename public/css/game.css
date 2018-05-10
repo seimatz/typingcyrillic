@@ -6,7 +6,11 @@
 .question {
   font-size: 20pt;
   border-bottom: solid 1px #000000;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.trans {
+  font-size: 12pt;
 }
 
 textarea.typedtxt {

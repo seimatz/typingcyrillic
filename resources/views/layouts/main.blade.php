@@ -7,7 +7,7 @@
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
       <!-- <link rel="stylesheet" href={{ asset('css/materialize.min.css')}} > -->
-      <link rel="stylesheet" href={{ asset('css/game.css?1')}} >
+      <link rel="stylesheet" href={{ asset('css/game.css?2')}} >
       <link rel="stylesheet" href={{ asset('css/chart.css')}} >
 <!--       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/game.css"/>
