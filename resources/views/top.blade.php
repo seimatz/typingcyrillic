@@ -17,7 +17,7 @@
     <div class="col s6">
     <div class="card">
       <div class="card-content">
-        <h4>Russian</h4>
+        <h4>Русский</h4>
       </div>
       <div class="card-tabs">
         <ul class="tabs tabs-fixed-width">
@@ -40,7 +40,7 @@
   <div class="col s6">
   <div class="card">
     <div class="card-content">
-      <h4>Ukrainian</h4>
+      <h4>Українська</h4>
     </div>
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width">
@@ -57,6 +57,28 @@
     </div>
   </div>
 </div>
+
+<div class="col s6">
+<div class="card">
+  <div class="card-content">
+    <h4>Български</h4>
+  </div>
+  <div class="card-tabs">
+    <ul class="tabs tabs-fixed-width">
+      <li class="tab"><a href="#bg-level1" class="active">Level 1</a></li>
+      <li class="tab"><a href="#bg-level2">Level 2</a></li>
+    </ul>
+  </div>
+  <div class="card-content grey lighten-4">
+      <div id="bg-level1">アルファベットまたは記号を１文字ずつ練習します。  <a href="/game/bulgarian/1" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
+
+</div>
+    <div id="bg-level2">基礎単語1,000語から、ランダムで30問を出題します。　<a href="/game/bulgarian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+
+  </div>
+</div>
+</div>
+
 
   </div>
 </div>
