@@ -4,7 +4,7 @@
             <div class="row">
               <div class="col l4 s12">
                 <h5 class="white-text">Developer</h5>
-                <p class="grey-text text-lighten-4">Sei Matsushita, Japan</p>
+                <p class="grey-text text-lighten-4">Sei Matz, Japan</p>
                 <p><a href="https://goo.gl/forms/LfdHgaVzdLPRTayX2" target="_blank" class="grey-text text-lighten-3">コメント・要望 Comments, requests</a></p>
               </div>
               <div class="col l6 offset-l2 s12">
@@ -18,7 +18,7 @@
           </div>
           <div class="footer-copyright teal">
             <div class="container">
-            © 2018 Typing-Ru, All rights reserved.
+            © 2018 Typing-Cyrillic, All rights reserved.
             </div>
           </div>
         </footer>

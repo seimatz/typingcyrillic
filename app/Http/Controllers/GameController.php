@@ -33,16 +33,8 @@ class GameController extends Controller
       $en_sentence = join('/', $trans_en);
       $jp_sentence = join('/', $trans_jp);
 
-      $lang_jp = "言語名";
-      if($lang == "russian"){
-        $lang_jp = "ロシア語";
-      } elseif($lang == "ukrainian"){
-        $lang_jp = "ウクライナ語";
-      } elseif($lang == "bulgarian"){
-        $lang_jp = "ブルガリア語";
-      } elseif($lang == "belarusian"){
-        $lang_jp = "ベラルーシ語";
-      }
-      return view('game', ['q_sentence'=>$q_sentence, 'lang_jp'=>$lang_jp, 'en_sentence'=>$en_sentence, 'jp_sentence'=>$jp_sentence]);
+      $lang = ucfirst($lang); //capital letter converter
+      
+      return view('game', ['q_sentence'=>$q_sentence, 'lang'=>$lang, 'en_sentence'=>$en_sentence, 'jp_sentence'=>$jp_sentence]);
     }
 }

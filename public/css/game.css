@@ -183,3 +183,12 @@ list-style: none;
 #contents img {
     max-width: 100%;
 }
+
+.browser-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.top_lang {
+  margin: 0;
+}

@@ -93,7 +93,7 @@
          charnum = 0;
          maxchar = 0;
          typed.innerHTML = "";
-         maxchar = stoKey(questions[qNumber]).length;
+         maxchar = stoKey(questions[qNumber].trim()).length;
          question.innerHTML = questions[qNumber]; //Show question
          trans.innerHTML = translates[qNumber];
          document.getElementById("qcount").innerHTML = qNumber + 1;
@@ -138,7 +138,7 @@
             return arr; // returns array
         }
 
-      //
+
       //timecount タイム計測機能
       var startTime,
       timerId;
@@ -170,8 +170,6 @@
 
       //キーが押された時の処理
       document.onkeypress = function(e){
-         //var currentKey = e.keyCode;
-         //var modal3 = $('#modal3').isOpen;
          if(startflag < 1 && e.keyCode == 13){
            $('#modal3').closeModal();
            newQuestion(0);
@@ -185,23 +183,19 @@
               okCount += 1;
             }
           typeCount = 0;
-          // target.innerHTML = "OK" + currentKey;//for debug
 
           charnum += 1;
           totalCharnum += 1;
           addchar = questions[qNumber].substr(0, charnum); //get character typed by user
           typed.innerHTML = addchar;
 
-
             if (charnum == maxchar){ //when last character
-              // target.innerHTML = "Clear" + currentKey; //debug use
               qNumber += 1;
               stop();
-              //totalTime += Number(document.getElementById('sec').innerHTML)*100;
               setTimeout("newQuestion(qNumber)",500);
               soundOk();
             }
-            //キーが間違いの時
+        //キーが間違いの時
         } else if(e.keyCode != 13) {//type false
           misstyped.innerHTML = currentKey;
           soundNg();
@@ -212,12 +206,12 @@
         };
 
         function soundOk() {
-          // [ID:sound-file]の音声ファイルを再生[play()]する
+          // OK音声ファイルを再生する
           document.getElementById('sound-ok').load();
           document.getElementById('sound-ok').play() ;
         }
 
         function soundNg() {
-          // [ID:sound-file]の音声ファイルを再生[play()]する
+          // NG音声ファイルを再生する
           document.getElementById('sound-ng').play() ;
         }
