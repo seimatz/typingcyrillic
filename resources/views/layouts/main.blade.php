@@ -16,6 +16,16 @@
       <meta name="description" content="キリル文字のタイピングを練習するウェブアプリです。ロシア語、ウクライナ語、ブルガリア語のタイピングを練習できます。
       This is the web app for practicing touch typing in Cyrillic alphabets (Russian, Ukrainian, Bulgarian, and etc).">
 
+      <!--OGP tags for sns-->
+      <meta property="og:title" content="@yield('title')">
+      <meta property="og:url" content="http://cyrillic.typing-up.pro/">
+      <meta property="og:image" content={{ asset('img/thum.png')}}>
+      <meta property="og:site_name" content="Typing.Cyrillic">
+      <meta property="og:description" content="キリル文字のタイピングを練習するウェブアプリです。ロシア語、ウクライナ語、ブルガリア語のタイピングを練習できます。
+      This is the web app for practicing touch typing in Cyrillic alphabets (Russian, Ukrainian, Bulgarian, and etc).">
+
+      <link rel="canonical" href="https://cyrillic.typing-up.pro/">
+      <!--Google analytics-->
       <title>@yield('title')</title>
 
     </head>
@@ -38,7 +48,7 @@
       </script>
       <!-- load js only game window -->
       @if (Request::segment(1) == "game")
-      <script type="text/javascript" src={{ asset('js/typingru.js?2') }}></script>
+      <script type="text/javascript" src={{ asset('js/typingru.js?3') }}></script>
       @endif
 
       </body>

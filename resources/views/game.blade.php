@@ -58,7 +58,7 @@
        <h3>Ready?</h3>
        <p>キーボードの設定を{{$lang}}に変えてください</p>
        <p>Change your keyboard language to {{$lang}}.</p>
-       <button class="modal-action modal-close btn-large orange darken-3" style="width:80%;" onclick="newQuestion(0)">GO! or Press Enter Key</button><br><br>
+       <button class="modal-action modal-close btn-large orange darken-3" style="width:80%;" onclick="newQuestion(0)">GO! - Press Enter Key</button><br><br>
        <a class="btn grey" href="/" style="width:35%;"><i class="material-icons left">settings_power</i>END</a>
        <button data-target="modal1" class="modal-trigger btn col s12 grey" style="width:35%;"><i class="material-icons left">live_help</i>HOW TO PLAY</button><br><br>
 
@@ -68,14 +68,7 @@
  <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h4>使い方</h4>
-      <p>・Typing.Cyrillic は、キリル文字のタイピング練習のためのウェブアプリです。</p>
-      <p>・Chrome、Firefox、Edgeの最新版で正常に動作します。PCのみです。</p>
-      <p>・キーボードの入力言語を「{{$lang}}」に切り替えて、ゲームを始めてください。<a href="/contents/setting/">ロシア語キーボードの設定方法</a></p></p>
-      <p>・制限時間はありません。</p>
-      <p>・SKIPボタンで次の問題へ行けます。</p>
-      <p>・小文字と大文字を区別します。スペース、カンマ、ピリオド、記号も入力してください。</p>
-      <p>・バクを見つけたら<a href="https://goo.gl/forms/LfdHgaVzdLPRTayX2" target="_blank">バグ報告フォーム</a>からご連絡ください。</p>
+      @include('layouts.help')
     </div>
     <div class="modal-footer">
       <button class="modal-action modal-close btn-flat ">OK</button>
@@ -86,8 +79,11 @@
   <div id="modal2" class="modal">
     <div id="result" class="modal-content">
     </div>
-    <div class="modal-footer">
-      <button class="modal-action modal-close btn-flat" style="clear:both;" onclick="reset()">OK</button>
+    <div class="center" style="clear:both;">
+      <br>
+      <button class="modal-action modal-close btn orange darken-3" style="width:80%;" onclick="reset()"><i class="material-icons left">play_arrow</i>TRY AGAIN - PRESS ENTER KEY</button><br><br>
+      <a id="tweet" class="btn grey" style="width:35%;" href="" target="_blank"><i class="material-icons left">share</i>Tweet Result</a>
+      <a class="btn grey" href="/" style="width:35%;"><i class="material-icons left">settings_power</i>END</a></p>
     </div>
   </div>
 

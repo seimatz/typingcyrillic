@@ -10,7 +10,6 @@
       var translates = trans_all.split("/");
 
       document.getElementById("qtotal").innerHTML = questions.length;
-      //['Более 20 турецких танков пересекли границу с Сирией в районе города Аль-Раи','да','привет'];
 
        //画面描写パーツの定義
         var question = document.getElementById("question");
@@ -30,6 +29,9 @@
        var okCount = 0;//一発正解の文字数をカウント
        var maxchar = 0; //問題の文字列の長さを測定
        var startflag = 0; //ready 画面か判定するフラグ
+       var dir = location.href.split("/"); //パスから言語名を取得
+       var lang = dir[dir.length -2];
+       var lang = lang.toUpperCase();
 
        //First question
        if(qNumber == 0){
@@ -41,8 +43,8 @@
             startflag = 1;
              //全問クリア
              if(qNumber > questions.length -1){
+            startflag = 2;
               //count NG ミスタイプをカウント
-
              var fineRate = okCount/totalCharnum *100; //正確性
 
              if(fineRate < 100){
@@ -85,10 +87,13 @@
             for(var i=1 ;i<= star;i++) {
               stars +='<i class="small material-icons icon-yellow">star</i>';
             }
-            var resultMessage = '<h4>結果 Result</h4><h5>正確性 Accuracy rate: </h5><div class="charts"><div class="charts__chart chart--blue chart--p' + fineRate.toFixed(0) + '" data-percent></div></div><h5>スピード Speed:</h5>'+stars+'<span class="cpm">(CPM:'+speed+')</span>'+ ngMessage;
+
+            var twitterLink = 'https://twitter.com/intent/tweet?hashtags=TypingCyrillic&url=https%3A%2F%2Fcyrillic.typing-up.pro&text=Typing.Cyrillicでタイピングを練習しました[言語/Language]'+ lang +' [正確性/Accuracy rate]'+fineRate.toFixed(0)+' [CPM(分あたり打鍵数)]'+speed;
+            var resultMessage = '<h4>結果 Result</h4><h5>正確性 Accuracy rate: </h5><div class="charts"><div class="charts__chart chart--blue chart--p' + fineRate.toFixed(0) +
+            '" data-percent></div></div><h5>スピード Speed:</h5>'+stars+'<span class="cpm">(CPM:'+speed+')</span>'+ ngMessage;
              document.getElementById("result").innerHTML = resultMessage;
+             document.getElementById("tweet").href = twitterLink;
              $('#modal2').openModal();
-             hidekeyguide();
            }
          charnum = 0;
          maxchar = 0;
@@ -170,9 +175,16 @@
 
       //キーが押された時の処理
       document.onkeypress = function(e){
-         if(startflag < 1 && e.keyCode == 13){
-           $('#modal3').closeModal();
-           newQuestion(0);
+        //Enterkey
+         if(e.keyCode == 13){
+           if(startflag < 1){ //Close Ready window
+             $('#modal3').closeModal();
+             newQuestion(0);
+           } else if(startflag > 1) { //Close Result window
+             $('#modal2').closeModal();
+             reset();
+           }
+
          }
 
          typeCount += 1;
