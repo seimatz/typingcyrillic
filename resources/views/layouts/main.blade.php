@@ -1,12 +1,21 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44624390-4"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-44624390-4');
+      </script>
 
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-      <link rel="stylesheet" href={{ asset('css/game.css?4')}} >
+      <link rel="stylesheet" href={{ asset('css/game.css')}} >
       <link rel="stylesheet" href={{ asset('css/chart.css')}} >
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -48,7 +57,7 @@
       </script>
       <!-- load js only game window -->
       @if (Request::segment(1) == "game")
-      <script type="text/javascript" src={{ asset('js/typingru.js?3') }}></script>
+      <script type="text/javascript" src={{ asset('js/typingru.js') }}></script>
       @endif
 
       </body>

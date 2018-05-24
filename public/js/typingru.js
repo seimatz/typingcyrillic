@@ -29,9 +29,10 @@
        var okCount = 0;//一発正解の文字数をカウント
        var maxchar = 0; //問題の文字列の長さを測定
        var startflag = 0; //ready 画面か判定するフラグ
-       var dir = location.href.split("/"); //パスから言語名を取得
+       var dir = location.href.split("/"); //パス取得
        var lang = dir[dir.length -2];
-       var lang = lang.toUpperCase();
+       var lang = lang.toUpperCase(); //language name
+       var level = dir[dir.length -1]; //level
 
        //First question
        if(qNumber == 0){
@@ -42,68 +43,75 @@
        function newQuestion(qNumber){
             startflag = 1;
              //全問クリア
-             if(qNumber > questions.length -1){
-            startflag = 2;
-              //count NG ミスタイプをカウント
-             var fineRate = okCount/totalCharnum *100; //正確性
-
-             if(fineRate < 100){
-                //ミスタイプのうちわけカウント
-                misstype.forEach(function(value){
-                  if(!ngTotal[value]){
-                    ngTotal[value]=1;
-                  }else {
-                    ngTotal[value] += 1;
-                  }
-                });
-                //ミスタイプ多い順にソート
-               ngArray = sortObject(ngTotal);
-               var fmisstype = "";
-               for(k in ngArray.slice(0,3)){
-                if(ngArray[k].key !== "undefined"){
-                  fmisstype += '<span class="result_misstype">'+ngArray[k].key+'</span>';
-                  }
-                }
-               var ngMessage = '<h5>よくミスするキー Friequent misstyped keyes:</h5><p>' + fmisstype.toString() +'  </p>';
-             } else {
-               var ngMessage = '<p style="font-size:1.5em;">ミスはゼロです。おめでとうございます！</p>';
-            }
-
-            var totalMin = Number(totalTime/100/60).toFixed(2); //合計時間を分に変換（秒）を分に変換
-            var speed = Number(totalCharnum/totalMin).toFixed(0); //1分あたりタイプ数(CPM)計算
-            var star;
-            if(speed > 250){
-              star = 5;
-            } else if(speed > 150){
-              star = 4;
-            } else if(speed >100){
-              star = 3;
-            } else if(speed >50){
-              star = 2;
+            if(qNumber > questions.length -1){
+               complete();
             } else {
-              star =1;
-            }
-            var stars = "";
-            for(var i=1 ;i<= star;i++) {
-              stars +='<i class="small material-icons icon-yellow">star</i>';
+               charnum = 0;
+               maxchar = 0;
+               typed.innerHTML = "";
+               maxchar = stoKey(questions[qNumber].trim()).length;
+               question.innerHTML = questions[qNumber]; //Show question
+               trans.innerHTML = translates[qNumber];
+               document.getElementById("qcount").innerHTML = qNumber + 1;
+               run(); //start count
             }
 
-            var twitterLink = 'https://twitter.com/intent/tweet?hashtags=TypingCyrillic&url=https%3A%2F%2Fcyrillic.typing-up.pro&text=Typing.Cyrillicでタイピングを練習しました[言語/Language]'+ lang +' [正確性/Accuracy rate]'+fineRate.toFixed(0)+' [CPM(分あたり打鍵数)]'+speed;
-            var resultMessage = '<h4>結果 Result</h4><h5>正確性 Accuracy rate: </h5><div class="charts"><div class="charts__chart chart--blue chart--p' + fineRate.toFixed(0) +
-            '" data-percent></div></div><h5>スピード Speed:</h5>'+stars+'<span class="cpm">(CPM:'+speed+')</span>'+ ngMessage;
-             document.getElementById("result").innerHTML = resultMessage;
-             document.getElementById("tweet").href = twitterLink;
-             $('#modal2').openModal();
-           }
-         charnum = 0;
-         maxchar = 0;
-         typed.innerHTML = "";
-         maxchar = stoKey(questions[qNumber].trim()).length;
-         question.innerHTML = questions[qNumber]; //Show question
-         trans.innerHTML = translates[qNumber];
-         document.getElementById("qcount").innerHTML = qNumber + 1;
-         run(); //start count
        }
+
+      function complete(){
+        startflag = 2;
+          //count NG ミスタイプをカウント
+         var fineRate = okCount/totalCharnum *100; //正確性
+
+         if(fineRate < 100){
+            //ミスタイプのうちわけカウント
+            misstype.forEach(function(value){
+              if(!ngTotal[value]){
+                ngTotal[value]=1;
+              }else {
+                ngTotal[value] += 1;
+              }
+            });
+            //ミスタイプ多い順にソート
+           ngArray = sortObject(ngTotal);
+           var fmisstype = "";
+           for(k in ngArray.slice(0,3)){
+            if(ngArray[k].key !== "undefined"){
+              fmisstype += '<span class="result_misstype">'+ngArray[k].key+'</span>';
+              }
+            }
+           var ngMessage = '<h5>よくミスするキー Friequent misstyped keyes:</h5><p>' + fmisstype.toString() +'  </p>';
+         } else {
+           var ngMessage = '<p style="font-size:1.5em;">ミスはゼロです。おめでとうございます！ Perfect!</p>';
+        }
+
+        var totalMin = Number(totalTime/100/60).toFixed(2); //合計時間を分に変換（秒）を分に変換
+        var speed = Number(totalCharnum/totalMin).toFixed(0); //1分あたりタイプ数(CPM)計算
+        var star;
+        if(speed > 200){
+          star = 5;
+          } else if(speed > 150){
+            star = 4;
+          } else if(speed >100){
+            star = 3;
+          } else if(speed >50){
+            star = 2;
+          } else {
+            star =1;
+        }
+        var stars = "";
+        for(var i=1 ;i<= star;i++) {
+          stars +='<i class="small material-icons icon-yellow">star</i>';
+        }
+
+        var twitterLink = 'https://twitter.com/intent/tweet?hashtags=TypingCyrillic&url=https%3A%2F%2Fcyrillic.typing-up.pro&text=Typing.Cyrillicでタイピングを練習しました[言語/Language]'+ lang +' [Level]'+ level +' [正確性/Accuracy rate]'+fineRate.toFixed(0)+' [CPM(分あたり打鍵数)]'+speed;
+        var resultMessage = '<h4>結果 Result</h4><h5>正確性 Accuracy rate: </h5><div class="charts"><div class="charts__chart chart--blue chart--p' + fineRate.toFixed(0) +
+        '" data-percent></div></div><h5>スピード Speed:</h5>'+stars+'<span class="cpm">(CPM:'+speed+')</span>'+ ngMessage;
+         document.getElementById("result").innerHTML = resultMessage;
+         document.getElementById("tweet").href = twitterLink;
+         $('#modal2').openModal();
+
+      }
 
       function skip(){
         qNumber = document.getElementById("qcount").innerHTML;
