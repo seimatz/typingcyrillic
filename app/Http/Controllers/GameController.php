@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Goutte\Client;
 
 class GameController extends Controller
 {
@@ -42,4 +43,15 @@ class GameController extends Controller
 
       return view('game', ['q_sentence'=>$q_sentence, 'lang'=>$lang, 'en_sentence'=>$en_sentence, 'jp_sentence'=>$jp_sentence]);
     }
+
+    public function scraping()
+    {
+      $client = new Client();
+      $crawler = $client->request('GET', 'https://ria.ru/archive/20180104/');
+      $crawler->filter('.b-list .b-list__item a span.b-list__item-title')->each(function ($node) {
+        dump($node->text());
+      });
+      return view('welcome');
+    }
+
 }
