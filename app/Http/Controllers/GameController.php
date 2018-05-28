@@ -20,6 +20,11 @@ class GameController extends Controller
       ->orderByRaw('RAND()')
       ->limit($limit)
       ->get();
+
+      if(count($items) < 1) { //data is not set
+        abort(404); //return 404 page
+      }
+
       $questions = array();
       $trans_en = array();
       $trans_jp = array();
@@ -34,7 +39,7 @@ class GameController extends Controller
       $jp_sentence = join('/', $trans_jp);
 
       $lang = ucfirst($lang); //capital letter converter
-      
+
       return view('game', ['q_sentence'=>$q_sentence, 'lang'=>$lang, 'en_sentence'=>$en_sentence, 'jp_sentence'=>$jp_sentence]);
     }
 }

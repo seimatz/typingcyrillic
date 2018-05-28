@@ -52,6 +52,7 @@
                maxchar = stoKey(questions[qNumber].trim()).length;
                question.innerHTML = questions[qNumber]; //Show question
                trans.innerHTML = translates[qNumber];
+               typed.style.minHeight = question.clientHeight + 10 + 'px';
                document.getElementById("qcount").innerHTML = qNumber + 1;
                run(); //start count
             }

@@ -18,7 +18,7 @@ Route::get('/', function () {
 //game main screen
 Route::get('game/{lang}/{level}', 'GameController@index')
 ->where('lang', 'russian|bulgarian|ukrainian')
-->where('level', '[1-2]');
+->where('level', '[1-3]');
 
 //Keyboard setting
 Route::get('contents/setting', function () {

@@ -57,7 +57,7 @@
       </script>
       <!-- load js only game window -->
       @if (Request::segment(1) == "game")
-      <script type="text/javascript" src={{ asset('js/typingru.js') }}></script>
+      <script type="text/javascript" src={{ asset('js/typingru.js?1') }}></script>
       @endif
 
       </body>
