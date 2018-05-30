@@ -207,7 +207,9 @@
 
           charnum += 1;
           totalCharnum += 1;
+
           addchar = questions[qNumber].substr(0, charnum); //get character typed by user
+          addchar = addchar.replace(/ /g, '␣'); //replace space
           typed.innerHTML = addchar;
 
             if (charnum == maxchar){ //when last character

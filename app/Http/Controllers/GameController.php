@@ -13,10 +13,15 @@ class GameController extends Controller
     {
       if($level == 1){
         $limit = 30;
-      } else {
+        $table = $lang.'_qs';
+      } elseif($level == 2) {
         $limit = 15;
+        $table = $lang.'_qs';
+      } elseif($level == 3) {
+        $limit = 10;
+        $table = $lang.'news';
       }
-      $items = DB::table($lang.'_qs')
+      $items = DB::table($table)
       ->where('level', $level)
       ->orderByRaw('RAND()')
       ->limit($limit)
@@ -42,16 +47,6 @@ class GameController extends Controller
       $lang = ucfirst($lang); //capital letter converter
 
       return view('game', ['q_sentence'=>$q_sentence, 'lang'=>$lang, 'en_sentence'=>$en_sentence, 'jp_sentence'=>$jp_sentence]);
-    }
-
-    public function scraping()
-    {
-      $client = new Client();
-      $crawler = $client->request('GET', 'https://ria.ru/archive/20180104/');
-      $crawler->filter('.b-list .b-list__item a span.b-list__item-title')->each(function ($node) {
-        dump($node->text());
-      });
-      return view('welcome');
     }
 
 }
