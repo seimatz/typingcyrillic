@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
-        Commands\ScrapeNews::class
+        'App\Console\Commands\ScrapeNews'
     ];
 
     /**
@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         $schedule->command('scrape:news')
-                 ->dailyAt('6:00')
+                 ->dailyAt('14:45')
                  ->timezone('Europe/Moscow');
     }
 
