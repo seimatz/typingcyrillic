@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         $schedule->command('scrape:news')
-                 ->dailyAt('14:45')
+                 ->dailyAt('6:00')
                  ->timezone('Europe/Moscow');
     }
 
