@@ -4,7 +4,7 @@
             <div class="row">
               <div class="col l4 s12">
                 <h5 class="white-text">Developer</h5>
-                <p class="grey-text text-lighten-4">Sei Matsushita</p>
+                <p class="grey-text text-lighten-4">seimatz</p>
                 <p><a href="https://goo.gl/forms/LfdHgaVzdLPRTayX2" target="_blank" class="grey-text text-lighten-3">コメント・要望 Comments, requests</a></p>
               </div>
               <div class="col l6 offset-l2 s12">

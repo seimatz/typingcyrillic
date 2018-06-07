@@ -184,6 +184,15 @@ list-style: none;
     max-width: 100%;
 }
 
+#questions_all {
+  color:#eceff1;
+  line-height: 0em;
+}
+
+#trans_all {
+  color:#eceff1;
+  line-height: 0em;
+}
 .browser-icon {
   width: 40px;
   height: 40px;

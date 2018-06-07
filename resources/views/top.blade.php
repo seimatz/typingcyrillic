@@ -38,7 +38,7 @@
 
 </div>
         <div id="ru-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/russian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
-        <div id="ru-level3"><a href="https://ria.ru/">РИА Новости</a>ニュース記事見出しから10問を出題します。　<a href="/game/russian/3" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+        <div id="ru-level3"><a href="https://ria.ru/">РИА Новости</a>最近１ヶ月のニュース記事見出しから10問を出題します。　<a href="/game/russian/3" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
 
       </div>
     </div>
