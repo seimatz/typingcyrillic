@@ -74,15 +74,37 @@
   </div>
   <div class="card-tabs">
     <ul class="tabs tabs-fixed-width">
+      <li class="tab"><a href="#by-level1" class="active">Level 1</a></li>
+      <li class="tab"><a href="#by-level2">Level 2</a></li>
+    </ul>
+  </div>
+  <div class="card-content grey lighten-4">
+      <div id="by-level1">アルファベット・記号を１文字ずつ練習します。  <a href="/game/bulgarian/1" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
+
+</div>
+    <div id="by-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/bulgarian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+
+  </div>
+</div>
+</div>
+
+<div class="col s6">
+<div class="card">
+  <div class="card-content">
+    <h4 class="top_lang">Беларуская мова</h4>
+    <p class="grey-text trans">Belarusian ベラルーシ語</p>
+  </div>
+  <div class="card-tabs">
+    <ul class="tabs tabs-fixed-width">
       <li class="tab"><a href="#bg-level1" class="active">Level 1</a></li>
       <li class="tab"><a href="#bg-level2">Level 2</a></li>
     </ul>
   </div>
   <div class="card-content grey lighten-4">
-      <div id="bg-level1">アルファベット・記号を１文字ずつ練習します。  <a href="/game/bulgarian/1" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
+      <div id="bg-level1">アルファベット・記号を１文字ずつ練習します。  <a href="/game/belarusian/1" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
 
 </div>
-    <div id="bg-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/bulgarian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+    <div id="bg-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/belarusian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
 
   </div>
 </div>
