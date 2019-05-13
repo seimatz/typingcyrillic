@@ -24,6 +24,9 @@
       <meta name="robots" content="index,follow">
       <meta name="description" content="キリル文字のタイピングを練習するウェブアプリです。ロシア語、ウクライナ語、ブルガリア語のタイピングを練習できます。
       This is the web app for practicing touch typing in Cyrillic alphabets (Russian, Ukrainian, Bulgarian, and etc).">
+  
+      <!--Twitter cards-->
+      <meta name="twitter:card" content="summary_large_image">
 
       <!--OGP tags for sns-->
       <meta property="og:title" content="@yield('title')">
@@ -34,6 +37,7 @@
       This is the web app for practicing touch typing in Cyrillic alphabets (Russian, Ukrainian, Bulgarian, and etc).">
 
       <link rel="canonical" href="https://cyrillic.typing-up.pro/">
+
       <!--Google analytics-->
       <title>@yield('title')</title>
 
