@@ -110,6 +110,49 @@
 </div>
 </div>
 
+<div class="col s6">
+<div class="card">
+  <div class="card-content">
+    <h4 class="top_lang">Қазақ тілі</h4>
+    <p class="grey-text trans">Kazakh Language カザフ語</p>
+  </div>
+  <div class="card-tabs">
+    <ul class="tabs tabs-fixed-width">
+      <li class="tab"><a href="#kz-level1" class="active">Level 1</a></li>
+      <li class="tab"><a href="#kz-level2">Level 2</a></li>
+    </ul>
+  </div>
+  <div class="card-content grey lighten-4">
+      <div id="kz-level1">アルファベット・記号を１文字ずつ練習します。  <a href="/game/kazakh/1" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
+
+</div>
+    <div id="kz-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/kazakh/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+
+  </div>
+</div>
+</div>
+
+<div class="col s6">
+<div class="card">
+  <div class="card-content">
+    <h4 class="top_lang">Кыргыз тили</h4>
+    <p class="grey-text trans">Kyrgyz Language キルギス語</p>
+  </div>
+  <div class="card-tabs">
+    <ul class="tabs tabs-fixed-width">
+      <li class="tab"><a href="#kg-level1" class="active">Level 1</a></li>
+      <li class="tab"><a href="#kg-level2">Level 2</a></li>
+    </ul>
+  </div>
+  <div class="card-content grey lighten-4">
+      <div id="kg-level1">アルファベット・記号を１文字ずつ練習します。  <a href="/game/kyrgyz/1" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
+
+</div>
+    <div id="kg-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/kyrgyz/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+
+  </div>
+</div>
+</div>
 
   </div>
 </div>
