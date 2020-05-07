@@ -66,14 +66,7 @@
     </div>
 
  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
       @include('layouts.help')
-    </div>
-    <div class="modal-footer">
-      <button class="modal-action modal-close btn-flat ">OK</button>
-    </div>
-  </div>
 
  <!-- Modal Structure for result window-->
   <div id="modal2" class="modal">
