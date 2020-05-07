@@ -17,6 +17,7 @@
         <img src="{{ asset('img/edge.png')}}" alt="edge" class="browser-icon">
       </p>
       <button data-target="modal1" class="modal-trigger btn orange darken-3"><i class="material-icons left">live_help</i>HOW TO PLAY</button><br><br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8QVmwBglNdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     </div>
 
