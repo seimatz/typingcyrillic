@@ -17,6 +17,9 @@
         <img src="{{ asset('img/edge.png')}}" alt="edge" class="browser-icon">
       </p>
       <button data-target="modal1" class="modal-trigger btn orange darken-3"><i class="material-icons left">live_help</i>HOW TO PLAY</button><br><br>
+      <p>
+        オリジナル問題や他の言語で練習したい場合、<a href="https://www.typing-up.pro/">Typing-up.pro</a>をお試しください。
+      </p>
     </div>
     </div>
 
