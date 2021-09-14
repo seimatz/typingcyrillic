@@ -12,6 +12,8 @@
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="/">TOP</a></li>
                   <li><a class="grey-text text-lighten-3" href="/contents/setting/">ロシア語キーボードの設定方法(Only in Japanese)</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.typing-up.pro/">他の言語・オリジナル問題で練習する（Typing-up.pro）</a></li>
+
                 </ul>
               </div>
             </div>

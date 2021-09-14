@@ -34,6 +34,7 @@
           <li class="tab"><a href="#ru-level1" class="active">Level 1</a></li>
           <li class="tab"><a href="#ru-level2">Level 2</a></li>
           <li class="tab"><a href="#ru-level3">Level 3</a></li>
+          <li class="tab"><a href="#ru-original">Original</a></li>
         </ul>
       </div>
       <div class="card-content grey lighten-4">
@@ -42,6 +43,7 @@
 </div>
         <div id="ru-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/russian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
         <div id="ru-level3"><a href="https://ria.ru/">РИА Новости</a>最近１ヶ月のニュース記事見出しから10問を出題します。　<a href="/game/russian/3" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+        <div id="ru-original"><a href="https://www.typing-up.pro/">Typing-up.pro</a>でオリジナル問題を使い練習します。　<a href="https://www.typing-up.pro/" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
 
       </div>
     </div>
@@ -57,6 +59,8 @@
       <ul class="tabs tabs-fixed-width">
         <li class="tab"><a href="#ua-level1" class="active">Level 1</a></li>
         <li class="tab"><a href="#ua-level2">Level 2</a></li>
+        <li class="tab"><a href="#ua-original">Original</a></li>
+
       </ul>
     </div>
     <div class="card-content grey lighten-4">
@@ -64,6 +68,7 @@
 
 </div>
       <div id="ua-level2">基礎単語から、ランダムで15問を出題します。　<a href="/game/ukrainian/2" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
+      <div id="ua-original"><a href="https://www.typing-up.pro/">Typing-up.pro</a>でオリジナル問題を使い練習します。　<a href="https://www.typing-up.pro/" class="btn-floating btn-middle waves-effect waves-light"><i class="material-icons">play_arrow</i></a></div>
 
     </div>
   </div>
